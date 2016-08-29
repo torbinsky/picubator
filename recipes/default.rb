@@ -4,7 +4,10 @@ package "build-essential"
 
 # Install python and pythong packages that we will need
 python_runtime "2"
+# For our picubator daemon
 python_package 'daemon'
+# Orchestrate sdk
+python_package 'porc'
 
 # Download Adafruit Python DHT Sensor Library
 git "#{Chef::Config[:file_cache_path]}/dht22" do
