@@ -6,7 +6,6 @@ provisioner:
   name: chef_solo
 
 platforms:
-  - name: ubuntu-14.04
   - name: debian-8.3
 
 suites:
