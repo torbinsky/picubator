@@ -1,13 +1,19 @@
 # Install Git
 package "git"
+# Support for building Adafruit DHT library
 package "build-essential"
+# For requests[security]
+package "libffi-dev"
+package "libssl-dev"
 
 # Install python and pythong packages that we will need
 python_runtime "2"
 # For our picubator daemon
 python_package 'daemon'
-# Orchestrate sdk
-python_package 'porc'
+# Adafruit IO
+python_package 'adafruit-io'
+# Need better SSL!
+python_package 'requests[security]'
 
 # Download Adafruit Python DHT Sensor Library
 git "#{Chef::Config[:file_cache_path]}/dht22" do
