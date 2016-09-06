@@ -1,0 +1,16 @@
+{
+  "sensor": {
+    "type": "<%= node['picubator']['sensor']['type'] %>",
+    "pinNum": <%= node['picubator']['sensor']['pin_num'] %>
+  },
+  "adafruitio": {
+    "key": "<%= node['picubator']['adafruitio']['key'] %>",
+    "temperatureFeedName": "<%= node['picubator']['adafruitio']['temperature_feed_name'] %>e",
+    "humidityFeedName": "<%= node['picubator']['adafruitio']['humidity_feed_name'] %>",
+    "temperatureThresholdFeedName": "<%= node['picubator']['adafruitio']['temperature_threshold_feed_name'] %>",
+    "mainToggleFeedName": "<%= node['picubator']['adafruitio']['main_toggle_feed_name'] %>"
+  },
+  "heat": {
+    "powerControlPinNum": <%= node['picubator']['heat']['power_control_pin_num'] %>
+  }
+}

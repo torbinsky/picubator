@@ -1,0 +1,13 @@
+author "Torben Werner &lt;torbinsky+picubator@gmail.com&gt;"
+description "Python service for controlling/monitoring an incubator using a Raspberry Pi"
+
+start on static-network-up
+stop on runlevel [2345]
+
+console log
+
+env PICUBATOR_CONFIG=<%= node['picubator']['config_dir'] %>config.json
+
+exec /usr/bin/python <%= node['picubator']['app_root'] %>picubator/daemon.py
+respawn
+respawn limit 10 5
