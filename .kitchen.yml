@@ -13,4 +13,7 @@ suites:
     run_list:
       - recipe[apt::default]
       - recipe[picubator::default]
+      - recipe[picubator::systemd]
     attributes:
+      picubator:
+        noop_daemon: "ON"

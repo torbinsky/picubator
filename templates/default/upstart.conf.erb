@@ -6,8 +6,9 @@ stop on runlevel [2345]
 
 console log
 
+env PICUBATOR_NOOP_DAEMON=<%= node['picubator']['noop_daemon'] %>
 env PICUBATOR_CONFIG=<%= node['picubator']['config_dir'] %>config.json
 
-exec /usr/bin/python <%= node['picubator']['app_root'] %>picubator/daemon.py
+exec /usr/bin/python <%= node['picubator']['app_root'] %>/picubator/daemon.py
 respawn
 respawn limit 10 5

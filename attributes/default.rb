@@ -15,5 +15,8 @@ default['picubator']['adafruitio']['temperature_threshold_feed_name'] = 'picubat
 default['picubator']['adafruitio']['main_toggle_feed_name'] = 'picubator-toggle'
 
 # Installation Attributes
-default['picubator']['app_root'] = '/opt/'
+default['picubator']['app_root'] = '/opt/picubator'
 default['picubator']['config_dir'] = '/etc/picubator/'
+
+# To enable an alternative daemon mode so we can test things better
+default['picubator']['noop_daemon'] = 'OFF'

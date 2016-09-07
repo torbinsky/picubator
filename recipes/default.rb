@@ -8,8 +8,8 @@ package "libssl-dev"
 
 # Install python and pythong packages that we will need
 python_runtime "2"
-# For our picubator daemon
-python_package 'daemon'
+# For controlling GPIO on Raspberry Pi (TODO: support BBB?)
+python_package 'RPi.GPIO'
 # Adafruit IO
 python_package 'adafruit-io'
 # Need better SSL!
@@ -49,13 +49,14 @@ end
 Chef::Log.info("Downloading picubator-app...")
 
 # Download picubator-app to app root directory
-git "#{node['picubator']['app_root']}picubator" do
+git "#{node['picubator']['app_root']}" do
   repository 'git://github.com/torbinsky/picubator-app.git'
   reference 'master'
   action :sync
   notifies :restart, 'service[picubator]'
 end
 
+# Ensure permissions are correct
 directory "#{node['picubator']['app_root']}" do
   owner 'root'
   group 'root'
@@ -82,6 +83,3 @@ template "#{node['picubator']['config_dir']}config.json" do
   mode '0700'
   notifies :restart, 'service[picubator]'
 end
-
-# Install an upstart job
-include_recipe 'picubator::upstart'
