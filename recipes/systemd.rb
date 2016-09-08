@@ -10,7 +10,7 @@ systemd_service 'picubator' do
     wanted_by 'multi-user.target'
   end
   service do
-    environment 'PICUBATOR_CONFIG' => "#{node['picubator']['config_dir']}"
+    environment 'PICUBATOR_CONFIG' => "#{node['picubator']['config_dir']}/config.json"
     case node['picubator']['noop_daemon']
     when "ON"
       exec_start "/usr/bin/python #{node['picubator']['app_root']}/picubator/systemd.py noop"
