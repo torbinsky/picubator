@@ -1,5 +1,5 @@
 name "picubator"
-version "0.1.1"
+version "0.1.2"
 
 depends 'poise-python', '~> 1.4.0'
 depends 'apt'
