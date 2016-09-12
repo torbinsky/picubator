@@ -13,7 +13,7 @@ default['picubator']['adafruitio']['temperature_feed_name'] = 'picubator-tempera
 default['picubator']['adafruitio']['humidity_feed_name'] = 'picubator-humidity'
 default['picubator']['adafruitio']['temperature_threshold_feed_name'] = 'picubator-threshold'
 default['picubator']['adafruitio']['main_toggle_feed_name'] = 'picubator-toggle'
-default['picubator']['adafruitio']['main_status_feed_name'] = 'picubator-status'
+default['picubator']['adafruitio']['status_feed_name'] = 'picubator-status'
 
 # Installation Attributes
 default['picubator']['app_root'] = '/opt/picubator'
