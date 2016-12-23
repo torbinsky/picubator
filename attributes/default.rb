@@ -18,6 +18,7 @@ default['picubator']['adafruitio']['temperature_threshold_feed_name'] = 'picubat
 default['picubator']['adafruitio']['main_toggle_feed_name'] = 'picubator-toggle'
 default['picubator']['adafruitio']['status_feed_name'] = 'picubator-status'
 default['picubator']['adafruitio']['heater_status_feed_name'] = 'picubator-heater-status'
+default['picubator']['adafruitio']['camera_feed_name'] = 'picubator-camera'
 
 # Installation Attributes
 default['picubator']['app_root'] = '/opt/picubator'
