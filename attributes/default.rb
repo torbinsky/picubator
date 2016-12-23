@@ -7,6 +7,9 @@ default['picubator']['sensor']['pin_num'] = 4
 # Pick a pin number for the heater power control pin
 default['picubator']['heat']['power_control_pin_num'] = 23
 
+default['picubator']['camera']['x_res'] = 320
+default['picubator']['camera']['y_res'] = 240
+
 # Attributes for Adafruit IO dashboard functionality
 default['picubator']['adafruitio']['key'] = nil
 default['picubator']['adafruitio']['temperature_feed_name'] = 'picubator-temperature'

@@ -15,6 +15,8 @@ python_package 'adafruit-io'
 # Need better SSL!
 python_package 'requests[security]'
 
+python_package 'picamera'
+
 Chef::Log.info("Downloading Adafruit Python DHT library...")
 
 # Download Adafruit Python DHT Sensor Library
