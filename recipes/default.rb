@@ -14,7 +14,7 @@ python_package 'RPi.GPIO'
 python_package 'adafruit-io'
 # Need better SSL!
 python_package 'requests[security]'
-
+python_package 'transitions'
 python_package 'picamera'
 
 Chef::Log.info("Downloading Adafruit Python DHT library...")
